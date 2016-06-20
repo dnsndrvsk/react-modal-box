@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "webpack --config ./webpack.production.js",
     "build": "webpack --config ./webpack.production.js",
-    "watch": "webpack --config ./webpack.development.js --watch"
+    "watch": "webpack --config ./webpack.development.js --watch",
+    "ghpages" : "git subtree push --prefix examples/ origin gh-pages"
   },
   "keywords": [
     "react-component",
