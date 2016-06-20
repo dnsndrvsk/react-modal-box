@@ -13,6 +13,10 @@ is being called or being hidden.
 API
 ---
 
+__Demo__
+
+Demo: [React Component Box](http://www.sadiqevani.com/react-modal-box/)
+
 __Installing__
 ```
 npm install react-modal-box --save
