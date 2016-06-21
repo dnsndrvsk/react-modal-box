@@ -74,7 +74,7 @@ const Modal = React.createClass({
   },
   render() {
     return (
-      <div style={modalStyles.modalBackdrop} tabIndex="1" onClick={this.modalHide} onKeyUp={this.ESCKeyHide}>
+      <div {...this.props} style={modalStyles.modalBackdrop} tabIndex="1" onClick={this.modalHide} onKeyUp={this.ESCKeyHide}>
         <div style={modalStyles.modalContainer} onClick={(e) => e.stopPropagation()}>
           <button style={modalStyles.modalDismiss} onClick={this.modalHide} type="button">
             {operator.ifTrueDoElse(operator.bool(this.props.customIcon), function () {

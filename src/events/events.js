@@ -8,10 +8,10 @@ export default {
   on(name, fn) {
     return operator.ifTrueDo(operator.and(
       operator.ifFalseDo(operator.bool(name), function () {
-        return console.log("Error", "No Event name was specified!");
+        return console.error("Modal Box Error", "No Event name was specified!");
       }),
       operator.ifFalseDo(operator.isFunction(fn), function () {
-        return console.log("Error", "No callback function was specified!");
+        return console.error("Modal Box Error", "No callback function was specified!");
       }),
       operator.ifFalseDo(operator.isArray(this.events[name]), function () {
         return this.events[name] = [];

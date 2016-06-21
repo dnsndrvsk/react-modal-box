@@ -99,7 +99,7 @@
 	        { onClick: this.show },
 	        'Open Modal'
 	      ),
-	      _react2.default.createElement(_index.Modal, { customStyles: {
+	      _react2.default.createElement(_index.Modal, { className: 'hello', customStyles: {
 	          modalBackdrop: {
 	            background: "rgba(0, 0, 0, 0.8)"
 	          },
@@ -20432,6 +20432,11 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+	                                                                                                                                                                                                                                                                   * React Modal Box
+	                                                                                                                                                                                                                                                                   */
+
+
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -20524,7 +20529,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      { style: _modal2.default.modalBackdrop, tabIndex: '1', onClick: this.modalHide, onKeyUp: this.ESCKeyHide },
+	      _extends({}, this.props, { style: _modal2.default.modalBackdrop, tabIndex: '1', onClick: this.modalHide, onKeyUp: this.ESCKeyHide }),
 	      _react2.default.createElement(
 	        'div',
 	        { style: _modal2.default.modalContainer, onClick: function onClick(e) {
@@ -20561,10 +20566,7 @@
 	      )
 	    );
 	  }
-	}); /**
-	     * React Modal Box
-	     */
-
+	});
 
 	exports.default = Modal;
 
@@ -20588,9 +20590,9 @@
 	  events: {},
 	  on: function on(name, fn) {
 	    return _operator2.default.ifTrueDo(_operator2.default.and(_operator2.default.ifFalseDo(_operator2.default.bool(name), function () {
-	      return console.log("Error", "No Event name was specified!");
+	      return console.error("Modal Box Error", "No Event name was specified!");
 	    }), _operator2.default.ifFalseDo(_operator2.default.isFunction(fn), function () {
-	      return console.log("Error", "No callback function was specified!");
+	      return console.error("Modal Box Error", "No callback function was specified!");
 	    }), _operator2.default.ifFalseDo(_operator2.default.isArray(this.events[name]), function () {
 	      return this.events[name] = [];
 	    }, this)), function () {
@@ -20681,11 +20683,6 @@
 	    var context = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
 
 	    return value && fn.call(context, value) || def.call(context, value);
-	  },
-	  ifFalseDoElse: function ifFalseDoElse(value, fn, def) {
-	    var context = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
-
-	    return (value || fn.call(context, value)) && def.call(context, value);
 	  },
 	  isArray: function isArray(arr) {
 	    return Object.prototype.toString.call(arr) === '[object Array]';

@@ -32,7 +32,7 @@ var App = React.createClass({
       <div>
         React Modal Box
         <button onClick={this.show}>Open Modal</button>
-        <Modal customStyles={{
+        <Modal className="hello" customStyles={{
           modalBackdrop: {
             background: "rgba(0, 0, 0, 0.8)"
           },
