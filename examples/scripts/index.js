@@ -4,6 +4,9 @@
 import React      from 'react';
 import ReactDOM   from 'react-dom';
 
+/**
+ * Modal Imports
+ */
 import { Modal, ModalMixin, ModalEventsMixin } from '../../src/index.js';
 
 var App = React.createClass({

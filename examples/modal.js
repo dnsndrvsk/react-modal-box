@@ -109,9 +109,14 @@
 	        } })
 	    );
 	  }
-	}); /**
-	     * Example Code!
-	     */
+	});
+
+	/**
+	 * Modal Imports
+	 */
+	/**
+	 * Example Code!
+	 */
 
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("app"));
@@ -20682,7 +20687,7 @@
 	  ifTrueDoElse: function ifTrueDoElse(value, fn, def) {
 	    var context = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
 
-	    return value && fn.call(context, value) || def.call(context, value);
+	    return value ? fn.call(context, value) : def.call(context, value);
 	  },
 	  isArray: function isArray(arr) {
 	    return Object.prototype.toString.call(arr) === '[object Array]';

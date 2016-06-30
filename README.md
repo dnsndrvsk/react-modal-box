@@ -5,8 +5,8 @@ React Modal Box
 
 ---
 
-React Modal Box, is a simple but customizable React Component to display Modals on your application. Its simple
-event system allows you to place the modal in the root component of your application, and calling it with
+React Modal Box, is a simple dependency free and customizable React Component to display Modals on your application. 
+Its simple event system allows you to place the modal in the root component of your application, and calling it with
 the simple mixins, allows you to be flexible. It also includes event handling mixins, so you can detect when the modal
 is being called or being hidden.
 
@@ -34,6 +34,10 @@ __Invoking__
 ```
 <Modal />
 ```
+*Tip: Include this component on the root folder of your React Application, you don't have to specifically include 
+this modal on every view. By using the mixins and passing the content you want through the function calls, it gives you
+flexibility and reduces the amount of logic required to display modals, it also allows you to display different modal
+states in a single view, without cluttering the view/page component.*
 
 __Custom Styles__
 
@@ -65,6 +69,13 @@ __Custom Styles__
 />
 ```
 
+__Custom Properties__
+
+```
+<Modal className="your-modal-class" data-attributes="true" />
+```
+You can pass any property into the root modal element, which by default is the backdrop element.
+
 __Custom Icon Style__
 
 ```
@@ -80,6 +91,9 @@ this.modalShow(
     <button onClick={this.hide}>Close Button</button>
 );
 ```
+Pass any JSX elements here, and style them however you want. You can build multiple functions with different contents,
+and simply have a modal in the root component.
+
 
 ```
 this.modalHide();

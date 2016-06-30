@@ -33,7 +33,7 @@ export default {
     return value || fn.call(context, value);
   },
   ifTrueDoElse(value, fn, def, context = null) {
-    return (value && fn.call(context, value)) || def.call(context, value);
+    return value ? fn.call(context, value) : def.call(context, value);
   },
   isArray(arr) {
     return Object.prototype.toString.call(arr) === '[object Array]';
